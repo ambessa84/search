@@ -1,6 +1,10 @@
 import ProductCategoryRow from "../ProductCategoryRow/ProductCategoryRow";
 import ProductRow from "../ProductRow/ProductRow";
 
+const styleForTable = {
+  marginTop: "10px",
+};
+
 function getRows(products) {
   let rows = [];
   products.forEach(({ category, name, price, stocked }) => {
@@ -28,7 +32,7 @@ function ProductTable(props) {
     );
   });
   return (
-    <table>
+    <table style={styleForTable}>
       <thead>
         <tr>
           <th>Name</th>
